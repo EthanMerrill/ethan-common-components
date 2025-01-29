@@ -15,9 +15,9 @@ export function SignatureFooter(props: SignatureFooterProps) {
     const { backgroundColor, fontColor } = props;
 
     const sites: siteLinks[] = [
-        { siteName: "JamSort", siteLink: "jamsort.com" },
-        { siteName: "What Genre is This", siteLink: "whatgenreisthis.com" },
-        { siteName: "The Recipes Only", siteLink: "therecipesonly.com" }
+        { siteName: "JamSort", siteLink: "https://jamsort.com" },
+        { siteName: "What Genre is This", siteLink: "https://whatgenreisthis.com" },
+        { siteName: "The Recipes Only", siteLink: "https://therecipesonly.com" }
     ];
 
     return (
@@ -26,9 +26,9 @@ export function SignatureFooter(props: SignatureFooterProps) {
                 backgroundColor: backgroundColor, color: fontColor, padding: "1rem", textAlign: "center"
             }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row', flexWrap: 'wrap' }}>
-                    <div style={{ maxWidth: '300px' }}>
-                        <p style={{ textAlign: 'left' }}> Made with ♡ by
-                            <a href='ethanmerrill.com' style={{ textDecoration: 'none' }} onMouseEnter={(e) => e.currentTarget.style.textDecoration = 'underline'} onMouseLeave={(e) => e.currentTarget.style.textDecoration = 'none'}> Ethan Merrill </a><br></br>in Boston, Massachusetts USA</p>
+                    <div className='made-by'>
+                        <p className="signature-text"> Made with ♡ by
+                            <a href='https://ethanmerrill.com' style={{ textDecoration: 'none' }} > Ethan Merrill </a><br></br>in Boston, Massachusetts USA</p>
                     </div>
 
                     <div>
@@ -40,7 +40,7 @@ export function SignatureFooter(props: SignatureFooterProps) {
                                 )}
                             </li>))}
                     </div>
-                    <div style={{ display: 'flex', gap: '1rem' }}>
+                    <div style={{ display: 'flex', gap: '1rem' }} className='socials'>
                         <div style={{ width: '30px', height: '30px' }}>
                             <a href='https://bsky.app/profile/ethanmerrill.bsky.social'>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 530" width="100%" height="100%" version="1.1">
@@ -58,12 +58,31 @@ export function SignatureFooter(props: SignatureFooterProps) {
             </div >
             <style>
                 {`
-                a {
-                    color: ${fontColor};
-                }
-                a:hover {
-                    text-decoration: underline;
-                }
+                    .signature-text {
+                        text-align: left;
+                       
+                    }
+                    @media (max-width: 450px) {
+                        .signature-text {
+                            text-align: center;
+                        }
+                            .made-by {
+                            width: 100%;
+                        }
+                        .socials {
+                            justify-content: center;
+                            align-items: center;
+                            margin:auto;
+                            margin-top: 1rem;
+                            width: 100%;
+                        }
+                    }
+                    a {
+                        color: ${fontColor};
+                    }
+                    a:hover {
+                        text-decoration: underline;
+                    }
                 `}
             </style>
         </>
