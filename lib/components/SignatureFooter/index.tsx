@@ -15,9 +15,9 @@ export function SignatureFooter(props: SignatureFooterProps) {
     const { backgroundColor, fontColor } = props;
 
     const sites: siteLinks[] = [
-        { siteName: "JamSort", siteLink: "https://www.jamsort.com" },
-        { siteName: "What Genre is This", siteLink: "https://www.whatgenreisthis.com" },
-        { siteName: "The Recipes Only", siteLink: "https://www.therecipesonly.com" }
+        { siteName: "JamSort", siteLink: "https://jamsort.com" },
+        { siteName: "What Genre is This", siteLink: "https://whatgenreisthis.com" },
+        { siteName: "The Recipes Only", siteLink: "https://therecipesonly.com" }
     ];
 
     return (
@@ -28,7 +28,7 @@ export function SignatureFooter(props: SignatureFooterProps) {
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row', flexWrap: 'wrap', height: '35px' }}>
                     <div className='made-by'>
                         <p className="signature-text"> Made with ♡ by
-                            <a href='https://www.ethanmerrill.com' style={{ textDecoration: 'none' }} > <u>Ethan Merrill</u> </a>in Boston, Massachusetts USA</p>
+                            <a href='https://ethanmerrill.com' style={{ textDecoration: 'none' }} > <u>Ethan Merrill</u> </a>in Boston, Massachusetts USA</p>
                     </div>
 
                     <div>
